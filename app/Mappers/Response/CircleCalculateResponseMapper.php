@@ -2,11 +2,10 @@
 
 namespace App\Mappers\Response;
 
-use Illuminate\Contracts\Support\Arrayable;
 use App\Models\Circle;
 use App\Enums\ShapeTypeEnum;
 
-class CircleCalculateResponseMapper extends ResponseMapper implements Arrayable
+class CircleCalculateResponseMapper extends ResponseMapper
 {
     /**
      * @var \App\Models\Circle

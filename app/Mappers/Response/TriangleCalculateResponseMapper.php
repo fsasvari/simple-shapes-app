@@ -2,11 +2,10 @@
 
 namespace App\Mappers\Response;
 
-use Illuminate\Contracts\Support\Arrayable;
 use App\Models\Triangle;
 use App\Enums\ShapeTypeEnum;
 
-class TriangleCalculateResponseMapper extends ResponseMapper implements Arrayable
+class TriangleCalculateResponseMapper extends ResponseMapper
 {
     /**
      * @var \App\Models\Triangle

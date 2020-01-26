@@ -2,9 +2,10 @@
 
 namespace App\Mappers\Response;
 
+use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 
-abstract class ResponseMapper implements Jsonable
+abstract class ResponseMapper implements Arrayable, Jsonable
 {
     /**
      * Convert the object to its JSON representation.
