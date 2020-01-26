@@ -4,6 +4,8 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\URL;
 
 class Handler extends ExceptionHandler
 {
@@ -51,5 +53,24 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $exception)
     {
         return parent::render($request, $exception);
+    }
+
+    /**
+     * Get the default context variables for logging.
+     *
+     * @return array
+     */
+    protected function context()
+    {
+        try {
+            return array_filter([
+                'method' => Request::method(),
+                'url' => Request::fullUrl(),
+                'url_previous' => URL::previous(),
+                'input' => Request::except($this->dontFlash),
+            ]);
+        } catch (Throwable $e) {
+            return [];
+        }
     }
 }
