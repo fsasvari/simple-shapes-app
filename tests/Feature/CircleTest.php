@@ -11,7 +11,7 @@ class CircleTest extends TestCase
     /**
      * @test
      */
-    public function callTriangleEndpointWithIntegerNumbers_ExpectSuccessResponse()
+    public function callCircleEndpointWithIntegerNumbers_ExpectSuccessResponse()
     {
         $radius = 2;
 
@@ -27,7 +27,7 @@ class CircleTest extends TestCase
     /**
      * @test
      */
-    public function callTriangleEndpointWithDecimalNumbers_ExpectSuccessResponse()
+    public function callCircleEndpointWithDecimalNumbers_ExpectSuccessResponse()
     {
         $radius = 2.22;
 
@@ -43,7 +43,7 @@ class CircleTest extends TestCase
     /**
      * @test
      */
-    public function callTriangleEndpoint_ExpectBadRequestException()
+    public function callCircleEndpoint_ExpectBadRequestException()
     {
         $radius = "asdf";
 
