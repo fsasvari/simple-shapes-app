@@ -2,8 +2,13 @@
 
 namespace App\Models;
 
-interface CircumferenceInterface
+interface ShapeCalculateInterface
 {
+    /**
+     * @return float
+     */
+    public function calculateSurface(): float;
+
     /**
      * @return float
      */

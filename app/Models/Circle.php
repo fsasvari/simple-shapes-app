@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Circle implements CircumferenceInterface, SurfaceInterface
+class Circle implements ShapeCalculateInterface
 {
     /**
      * @var int|float

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Triangle implements CircumferenceInterface, SurfaceInterface
+class Triangle implements ShapeCalculateInterface
 {
     /**
      * @var float
